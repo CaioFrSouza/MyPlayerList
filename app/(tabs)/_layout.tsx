@@ -4,6 +4,7 @@ import React from 'react';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { StyleSheet, View } from 'react-native';
+import {TabsIcons} from "@/components/Icons/TabsIcons";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -12,17 +13,35 @@ export default function TabLayout() {
     <View style={[styles.container, {backgroundColor}]}>
       <Tabs
         screenOptions={{
-          tabBarActiveBackgroundColor: backgroundColor,
+            tabBarActiveBackgroundColor: backgroundColor,
+            tabBarInactiveBackgroundColor: backgroundColor,
           tabBarShowLabel: false,
-          tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-          headerShown: false,
+            headerShown:false,
+
         }}>
         <Tabs.Screen
           name="index"
           options={{
             title: 'Home',
+              tabBarIcon: (item) => item.focused ? TabsIcons.activeHome: TabsIcons.inactiveHome
           }}
         />
+
+          <Tabs.Screen
+              name="search"
+              options={{
+                  title: 'teste',
+                  tabBarIcon: (item) => item.focused ? TabsIcons.activePlay: TabsIcons.inactivePlay
+              }}
+          />
+
+          <Tabs.Screen
+              name="account"
+              options={{
+                  title: 'teste2',
+                  tabBarIcon: (item) => item.focused ? TabsIcons.activeAccount: TabsIcons.inactiveAccount
+              }}
+          />
       </Tabs>
     </View>
   );
@@ -30,7 +49,5 @@ export default function TabLayout() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 18,
-    paddingVertical: 14,
   }
 })

@@ -16,7 +16,8 @@ const ThemedApplicationBackground: React.FC<IThemedApplicationBackground> = (pro
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        
+        paddingHorizontal: 14,
+        paddingVertical: 18,
     }
 });
 
