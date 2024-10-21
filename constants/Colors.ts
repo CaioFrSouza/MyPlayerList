@@ -9,6 +9,7 @@ const tintColorDark = '#fff';
 export const Colors = {
   light: {
     text: '#11181C',
+    secondaryText:"#BCBCBC",
     background: '#15141F',
     tint: tintColorLight,
     icon: '#687076',
@@ -19,6 +20,7 @@ export const Colors = {
   },
   dark: {
     text: '#ECEDEE',
+    secondaryText:"#BCBCBC",
     background: '#15141F',
     tint: tintColorDark,
     icon: '#9BA1A6',
@@ -27,4 +29,7 @@ export const Colors = {
     orangeTitleStart: "#FF8F71",
     orangeTitleEnd: "#EF2D1A",
   },
+    text: {
+    trendingTitle: "#fff"
+  }
 };

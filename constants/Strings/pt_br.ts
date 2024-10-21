@@ -1,5 +1,9 @@
 export const Pt_Br = {
     titleOrange: "Acompanhe",
     TitleWhite: "Tudo",
-    TrendingTitle: "Tendencia",
+    TrendingMovieTitle: "Filmes em tendencias",
+    TrendingTVSeriesTitle: "Top Series",
+    ReleaseDate:"Data de lançamento",
+    Genre:"Genero",
+    Synopsis:"Sinopse"
 }

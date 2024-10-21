@@ -8,7 +8,7 @@ const ThemedApplicationBackground: React.FC<IThemedApplicationBackground> = (pro
     const colorScheme = useColorScheme();
     const backgroundColor = Colors[colorScheme ?? 'light'].background;
     
-    return <View style={[styles.container, {backgroundColor}]}>
+    return <View style={[styles.container, {backgroundColor}, props.styles]}>
         { props.children }
     </View>
 }
